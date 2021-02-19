@@ -1,0 +1,32 @@
+[
+  {
+    "id": "id-1",
+    "title": "My life",
+    "author": "Jane Bo",
+    "price": 450
+  },
+  {
+    "id": "id-2",
+    "title": "Love is...",
+    "author": "Bobby Jo",
+    "price": 220
+  },
+  {
+    "id": "id-3",
+    "title": "Sweet melody",
+    "author": "Alex Parker",
+    "price": 100
+  },
+  {
+    "id": "id-4",
+    "title": "Gracie",
+    "author": "Alisa Douson",
+    "price": 500
+  },
+  {
+    "id": "id-5",
+    "title": "Ann Marie",
+    "author": "Marie Bell",
+    "price": 300
+  }
+]

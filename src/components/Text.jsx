@@ -8,7 +8,7 @@ const NewComponent = (props) => (
       totam adipisci tempore nam animi perferendis odio! Reiciendis,
       consequuntur accusantium.
     </p>
-    {props.children};
+    {props.children}
   </div>
 );
 

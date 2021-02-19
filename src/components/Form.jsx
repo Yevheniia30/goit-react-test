@@ -4,7 +4,7 @@ const Form = (props) => (
       <input type="text" id="trololo" placeholder="Enter name"></input>
     </label>
     <button type="button" onClick={props.sayHello}>
-      Push me;
+      Push me
     </button>
   </div>
 );
