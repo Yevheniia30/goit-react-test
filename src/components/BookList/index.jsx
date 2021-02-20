@@ -18,11 +18,15 @@ BookList.propTypes = {
   books: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-      price: PropTypes.number.isRequired,
+      // title: PropTypes.string.isRequired,
+      // author: PropTypes.string.isRequired,
+      // price: PropTypes.number.isRequired,
     })
   ),
+};
+
+BookList.defaultProps = {
+  books: [],
 };
 
 export default BookList;

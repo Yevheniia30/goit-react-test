@@ -1,9 +1,11 @@
-const BookItem = ({ book }) => {
+import PropTypes from "prop-types";
+
+const BookItem = ({ book: { title, author, price } }) => {
   return (
     <li>
-      <h2>{book.title}</h2>
-      <p>{book.author}</p>
-      <p>{book.price}</p>
+      <h2>{title}</h2>
+      <p>{author}</p>
+      <p>{price}</p>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam tenetur
         ea reprehenderit eum voluptatum optio! Fugit distinctio maiores fugiat
@@ -12,6 +14,13 @@ const BookItem = ({ book }) => {
       </p>
     </li>
   );
+};
+BookItem.propTypes = {
+  book: PropTypes.shape({
+    title: PropTypes.string,
+    author: PropTypes.string,
+    price: PropTypes.number,
+  }),
 };
 
 export default BookItem;
