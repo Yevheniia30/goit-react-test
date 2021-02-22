@@ -1,6 +1,6 @@
-// import Navigation from "./components/Navigation";
+import Navigation from "./components/Navigation";
 import "./components/app.style.css";
-// import Content from "./components/Content";
+import Content from "./components/Content";
 import ColorPicker from "./components/ColorPicker";
 
 const colorPickerOptions = [
@@ -14,8 +14,8 @@ const colorPickerOptions = [
 const App = () => {
   return (
     <div className="app">
-      {/* <Navigation /> */}
-      {/* <Content /> */}
+      <Navigation />
+      <Content />
       <ColorPicker options={colorPickerOptions} />
     </div>
   );
