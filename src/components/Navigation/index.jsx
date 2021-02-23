@@ -21,9 +21,9 @@ const Navigation = () => {
   const classes = useStyles(x);
 
   // определяем активную страницу и присваиваем ей класс active-link
-  const { pathname } = window.location;
+  // const { pathname } = window.location;
 
-  console.log(classes);
+  // console.log(classes);
   return (
     <div className={classes.nav}>
       <NavLink path="/home-page" label="HOME" />

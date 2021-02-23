@@ -14,6 +14,7 @@ const ColorPicker = ({ options }) => {
           ></span>
         ))}
       </div>
+      <button onClick={(event) => console.log(event)}>Click me!</button>
     </div>
   );
 };
