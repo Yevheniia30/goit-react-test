@@ -13,7 +13,12 @@ const useStyles = createUseStyles({
     },
   },
   activeLink: {
+    color: "#fff",
     backgroundColor: "#752080",
+    "&:hover": {
+      color: "#fff",
+      backgroundColor: "#360f3b",
+    },
   },
 });
 
