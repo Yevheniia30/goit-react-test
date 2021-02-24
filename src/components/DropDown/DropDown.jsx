@@ -22,6 +22,8 @@ class DropDown extends Component {
   //   };
 
   render() {
+    const { visible } = this.state;
+
     return (
       <div className={s.DropDown}>
         {/* вместо двух кнопок делаем одну */}
@@ -32,7 +34,7 @@ class DropDown extends Component {
           onMouseOver={this.toggle}
           onMouseLeave={this.toggle}
         >
-          {this.state.visible ? "HIDE" : "SHOW"}
+          {visible ? "HIDE" : "SHOW"}
         </button>
         {/* <button className={s.button} onClick={this.show}>
           SHOW
@@ -41,7 +43,7 @@ class DropDown extends Component {
           HIDE
         </button> */}
 
-        {this.state.visible && <div className={s.menu}>Menu</div>}
+        {visible && <div className={s.menu}>Menu</div>}
       </div>
     );
   }
