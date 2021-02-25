@@ -1,11 +1,11 @@
-// import Navigation from "./components/Navigation";
+import Navigation from "./components/Navigation";
 import React, { Component } from "react";
 import "./components/app.style.css";
-// import Content from "./components/Content";
+import Content from "./components/Content";
 // import ColorPicker from "./components/ColorPicker";
 // import Counter from "./components/Counter/Counter";
 // import DropDown from "./components/DropDown/DropDown";
-import Todolist from "./components/TodoList";
+// import Todolist from "./components/TodoList";
 
 // const colorPickerOptions = [
 //   { label: "red", color: "#F44336" },
@@ -16,6 +16,7 @@ import Todolist from "./components/TodoList";
 // ];
 
 class App extends Component {
+  // -------------- TODOLIST----------------
   state = {
     todos: [
       { id: "id-1", text: "Todo 1", completed: false },
@@ -32,26 +33,27 @@ class App extends Component {
   };
 
   render() {
-    const { todos } = this.state;
+    // ----------------TODOLIST----------------
+    // const { todos } = this.state;
 
-    const completedTodos = todos.filter((todo) => todo.completed);
+    // const completedTodos = todos.filter((todo) => todo.completed);
 
     return (
       <div className="app">
         {/* <h1>Состояние компонента</h1> */}
-        {/* <Navigation />
-      <Content /> */}
+        <Navigation />
+        <Content />
         {/* <ColorPicker options={colorPickerOptions} /> */}
         {/* <Counter initialValue={10} /> */}
         {/* <DropDown /> */}
 
-        <div>
+        {/* <div>
           <span>Quantity: {todos.length}</span>
           <br />
           <span>Quantity of completed: {completedTodos.length}</span>
         </div>
 
-        <Todolist todos={todos} onDeleteTodo={this.deleteTodo} />
+        <Todolist todos={todos} onDeleteTodo={this.deleteTodo} /> */}
       </div>
     );
   }

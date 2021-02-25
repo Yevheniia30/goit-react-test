@@ -31,6 +31,7 @@ const Navigation = () => {
       <NavLink path="/books-page" label="BOOKS" />
       <NavLink path="/about-page" label="ABOUT" />
       <NavLink path="/test-page" label="TEST" />
+      <NavLink path="/userdetail-page" label="USERDETAILPAGE" />
     </div>
   );
 };

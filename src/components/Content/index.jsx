@@ -4,6 +4,7 @@ import UsersPage from "../../pages/UsersPage";
 import AboutPage from "../../pages/AboutPage";
 import BooksPage from "../../pages/BooksPage";
 import TestPage from "../../pages/TestPage";
+import UserDetailPage from "../../pages/UserDetailPage";
 
 const Content = () => {
   const { pathname } = window.location;
@@ -17,6 +18,7 @@ const Content = () => {
       {pathname === "/about-page" && <AboutPage />}
       {pathname === "/books-page" && <BooksPage />}
       {pathname === "/test-page" && <TestPage />}
+      {pathname === "/userdetail-page" && <UserDetailPage />}
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
         assumenda deleniti accusantium facere officia deserunt consequuntur
