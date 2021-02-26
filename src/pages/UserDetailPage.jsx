@@ -7,6 +7,7 @@ class UserDetailPage extends Component {
     age: 25,
     email: "susskaya86@gmail.com",
     hello: 0,
+    inputValue: "1234567",
   };
 
   handleBtnClick = () => {
@@ -30,8 +31,19 @@ class UserDetailPage extends Component {
     });
   };
 
+  // ф-ция записывает значение инпута
+  handleInputChange = (event) => {
+    console.log(event.target.value);
+
+    this.setState((prevState) => {
+      return {
+        inputValue: event.target.value,
+      };
+    });
+  };
+
   render() {
-    const { firstName, lastName, age, email, hello } = this.state;
+    const { firstName, lastName, age, email, hello, inputValue } = this.state;
 
     return (
       <div className="user__details">
@@ -40,7 +52,11 @@ class UserDetailPage extends Component {
         <p className="user__info">Lastname: {lastName}</p>
         <p className="user__info">Age: {age}</p>
         <p className="user__info">Email: {email}</p>
-        <input type="text" />
+        <input
+          type="text"
+          onChange={this.handleInputChange}
+          value={inputValue}
+        />
         {/* <p>Hello: {}</p> */}
         <button
           type="button"
@@ -49,7 +65,7 @@ class UserDetailPage extends Component {
         >
           Load User Data
         </button>
-        <p>Hello: {hello}</p>
+        <p>Hello: {inputValue}</p>
       </div>
     );
   }

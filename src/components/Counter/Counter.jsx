@@ -1,65 +1,35 @@
-import React, { Component } from "react";
-import Controls from "./Controls";
-// import PropTypes from "prop-types";
-class Counter extends Component {
-  //   constructor() {
-  //     super();
-  //     this.state = {
-  //       value: 0,
-  //     };
-  //   }
+import { useState } from "react";
 
-  // дефолтные значения (если не передали) и проптайпы
-  static defaultProps = {
-    initialValue: 0,
+// ------value  и ondelete взяли из пропсов в консоли----- =0 - замена defaultProps
+const Counter = ({ value = 0, onDelete }) => {
+  const [count, setValue] = useState(value);
+
+  const handleDecrement = () => {
+    setValue(count - 1);
   };
 
-  static propTypes = {};
-
-  // публичное свойство state вместо конструктора
-  state = {
-    value: this.props.initialValue,
-    a: 1,
-    b: 2,
+  const handleIncrement = () => {
+    setValue(count + 1);
   };
 
-  // публичное свойство класса чтобы привязать контекст
-  handleIncrement = () => {
-    //   перезаписать state поверх начального пишем обїект
-    // this.setState({
-    //   value: 10,
-    // });
+  return (
+    <div className="counter">
+      <button className="counter__btn" onClick={handleDecrement}>
+        -
+      </button>
+      <span className="counter__result">{count}</span>
+      <button className="counter__btn" onClick={handleIncrement}>
+        +
+      </button>
+      <button className="delete__btn" onClick={onDelete}>
+        x
+      </button>
+    </div>
+  );
+};
 
-    // обновить от предыдущего пишем функцию
-    this.setState((prevState) => {
-      return {
-        value: prevState.value + 1,
-      };
-    });
-  };
-  // console.log(event.target);
-
-  handleDecrement = () => {
-    this.setState((prevState) => {
-      return {
-        value: prevState.value - 1,
-      };
-    });
-  };
-
-  render() {
-    const { value } = this.state;
-
-    return (
-      <div className="Counter">
-        <span className="Counter__value">{value}</span>
-        <Controls
-          onIncrement={this.handleIncrement}
-          onDecrement={this.handleDecrement}
-        />
-      </div>
-    );
-  }
-}
+// Counter.defaultProps = {
+//   value: 0,
+// };
 
 export default Counter;
