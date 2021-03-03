@@ -1,7 +1,9 @@
-import Navigation from "./components/Navigation";
+// import Navigation from "./components/Navigation";
 import React, { Component } from "react";
 import "./components/app.style.css";
-import Content from "./components/Content";
+import Form from "./components/Form";
+// import Content from "./components/Content";
+
 // import ColorPicker from "./components/ColorPicker";
 // import Counter from "./components/Counter/Counter";
 // import DropDown from "./components/DropDown/DropDown";
@@ -18,19 +20,26 @@ import Content from "./components/Content";
 class App extends Component {
   // -------------- TODOLIST----------------
   state = {
-    todos: [
-      { id: "id-1", text: "Todo 1", completed: false },
-      { id: "id-2", text: "Todo 2", completed: true },
-      { id: "id-3", text: "Todo 3", completed: false },
-      { id: "id-4", text: "Todo 4", completed: true },
-    ],
+    contacts: [],
+
+    // todos: [
+    //   { id: "id-1", text: "Todo 1", completed: false },
+    //   { id: "id-2", text: "Todo 2", completed: true },
+    //   { id: "id-3", text: "Todo 3", completed: false },
+    //   { id: "id-4", text: "Todo 4", completed: true },
+    // ],
   };
 
-  deleteTodo = (todoId) => {
-    this.setState((prevState) => ({
-      todos: prevState.todos.filter((todo) => todo.id !== todoId),
-    }));
+  // ф-ция для получения данных введенных в форму
+  formOnSubmitHandler = (data) => {
+    console.log(data);
   };
+
+  // deleteTodo = (todoId) => {
+  //   this.setState((prevState) => ({
+  //     todos: prevState.todos.filter((todo) => todo.id !== todoId),
+  //   }));
+  // };
 
   render() {
     // ----------------TODOLIST----------------
@@ -40,9 +49,11 @@ class App extends Component {
 
     return (
       <div className="app">
+        <Form onSubmit={this.formOnSubmitHandler} />
+
         {/* <h1>Состояние компонента</h1> */}
-        <Navigation />
-        <Content />
+        {/* <Navigation /> */}
+        {/* <Content /> */}
         {/* <ColorPicker options={colorPickerOptions} /> */}
         {/* <Counter initialValue={10} /> */}
         {/* <DropDown /> */}
