@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import UserData from "./UserData";
 
 class UserDetailPage extends Component {
   state = {
@@ -43,15 +44,12 @@ class UserDetailPage extends Component {
   };
 
   render() {
-    const { firstName, lastName, age, email, hello, inputValue } = this.state;
+    const { firstName, lastName, age, email, inputValue } = this.state;
 
     return (
       <div className="user__details">
         <h1 className="user__title">User Details</h1>
-        <p className="user__info">Firstname:{firstName} </p>
-        <p className="user__info">Lastname: {lastName}</p>
-        <p className="user__info">Age: {age}</p>
-        <p className="user__info">Email: {email}</p>
+        <UserData user={{ firstName, lastName, age, email }} />
         <input
           type="text"
           onChange={this.handleInputChange}

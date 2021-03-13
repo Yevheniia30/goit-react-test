@@ -1,8 +1,8 @@
-// import Navigation from "./components/Navigation";
+import Navigation from "./components/Navigation";
 import React, { Component } from "react";
 import "./components/app.style.css";
-import Form from "./components/Form";
-// import Content from "./components/Content";
+// import Form from "./components/Form";
+import Content from "./components/Content";
 
 // import ColorPicker from "./components/ColorPicker";
 // import Counter from "./components/Counter/Counter";
@@ -49,12 +49,13 @@ class App extends Component {
 
     return (
       <div className="app">
-        <Form onSubmit={this.formOnSubmitHandler} />
+        {/* <Form onSubmit={this.formOnSubmitHandler} /> */}
 
         {/* <h1>Состояние компонента</h1> */}
-        {/* <Navigation /> */}
-        {/* <Content /> */}
+        <Navigation />
+        <Content />
         {/* <ColorPicker options={colorPickerOptions} /> */}
+
         {/* <Counter initialValue={10} /> */}
         {/* <DropDown /> */}
 
