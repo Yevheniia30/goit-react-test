@@ -5,6 +5,7 @@ import AboutPage from "../../pages/AboutPage";
 import BooksPage from "../../pages/BooksPage";
 import TestPage from "../../pages/TestPage";
 import UserDetailPage from "../../pages/UserDetailPage";
+import UserDetailHooks from "../../pages/UserDetailHooks";
 import CountersPage from "../../pages/CountersPage";
 
 const Content = () => {
@@ -20,6 +21,7 @@ const Content = () => {
       {pathname === "/books-page" && <BooksPage />}
       {pathname === "/test-page" && <TestPage />}
       {pathname === "/userdetail-page" && <UserDetailPage />}
+      {pathname === "/userdetailhooks-page" && <UserDetailHooks />}
       {pathname === "/counters-page" && <CountersPage />}
       {/* <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia

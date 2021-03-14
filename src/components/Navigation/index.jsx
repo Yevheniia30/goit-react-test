@@ -32,6 +32,7 @@ const Navigation = () => {
       <NavLink path="/about-page" label="ABOUT" />
       <NavLink path="/test-page" label="TEST" />
       <NavLink path="/userdetail-page" label="USERDETAILPAGE" />
+      <NavLink path="/userdetailhooks-page" label="USERDETAILHOOKS" />
       <NavLink path="/counters-page" label="COUNTERSPAGE " />
     </div>
   );
